@@ -4,6 +4,6 @@ Site autoritário, criado durante um trabalho da faculdade.
 
 O trabalho pedia para criar um site para alguma ONG de Pouso Alegre - MG.
 
-Link do site no [Netlify](https://ongsao-francisco.netlify.app/).
+Link do site no [githubPages](https://nerylucastoledo.github.io/OngSaoFrancisco.github.io/).
 
 Link do protótipo feito no [Figma](https://www.figma.com/file/B9bMrkxKWXv98i1LOJDad7/Animais).
