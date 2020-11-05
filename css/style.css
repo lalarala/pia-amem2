@@ -302,9 +302,10 @@ img {
 }
 .contatos a{
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     display: inline-block;
     color: #fff;
+    display: block;
 }
 .contatos a:hover {
     transition: .3s;
@@ -487,9 +488,67 @@ img {
     font-weight: bold;
     font-size: 0.875em;
 }
+/* PAGINA POSTS */
+#contato-formulario {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 450px;
+    padding: 20px;
+    background-color: #EDEAEA;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+}
 
+#contato-formulario label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 15px;
+    width: 120px;
+    line-height: 25px;
+    font-size: 1.125em;
+    color: #7B2D2D;
+    cursor: pointer;
+}
 
+#contato-formulario textarea {
+    font-size: 0.875em;
+    padding: 5px;
+    border: 1px solid #7B2D2D;
+    max-width: 100%;
+    width: 450px;
+    height: 100px;
+    color: #000;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+}
+#contato-formulario .botao {
+    padding: 10px;
+    background-color: #F2CB3F;
+    border: 1px solid #7B2D2D;
+    border-radius: 10px;
+    font-size: 1.125em;
+    display: block;
+    margin: 15px auto 0 auto;
+    cursor: pointer;
+}
+#contato-formulario .botao:hover {
+    transform: scale(1.2);
+    transition: .3s;
+}
+/* JS */
+.js-scroll {
+    opacity: 0;
+    transition: .3s;
+    transform: translate3d(-30px, 0, 0);
+}
 
+.js-scroll.animar {
+    opacity: 1;
+    transition: .3s;
+    transform: translate3d(0, 0, 0); 
+}
 
 /* RESPONSIVO */
 @media (max-width: 739px) {
