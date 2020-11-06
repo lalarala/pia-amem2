@@ -305,6 +305,9 @@ img {
     margin-bottom: 30px;
     display: inline-block;
     color: #fff;
+    display: inline-block;
+}
+.contatos a:nth-last-child(2) {
     display: block;
 }
 .contatos a:hover {
@@ -347,10 +350,10 @@ img {
     padding: 60px 0;
 }
 .sobre_items img{
-    margin: 0px 0 60px 0;
+    margin: 50px 0 60px 0;
     object-fit: cover;
     width: 100%;
-    height: 250px;
+    height: 100%;
     border: 3px solid #7B2D2D;
 }
 .sobre_items div p {
@@ -633,6 +636,9 @@ img {
         padding: 40px 0 20px 0
     }
     /* SOBRE EMPRESA */
+    .video {
+        height: 200px;
+    }
     .sobre_empresa {
         padding: 40px 0;
     }
@@ -671,9 +677,6 @@ img {
     }
     .subtitulo_pag {
         font-size: 2em;
-    }
-    .video {
-        height: 200px;
     }
     .sobre_ong {
         padding: 40px 0;

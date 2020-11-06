@@ -32,6 +32,7 @@ const animacaoDeScrollar = () => {
 			}
 		})
 	}
+
 	animarAoScrollar()
 	window.addEventListener('scroll', animarAoScrollar)
 }
