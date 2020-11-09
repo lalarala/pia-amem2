@@ -540,6 +540,16 @@ img {
     transform: scale(1.2);
     transition: .3s;
 }
+.post-feitos p {
+    font-weight: 400;
+    font-size: 1.125em;
+    display: block;
+    background-color: #f5efef;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #F2CB3F;
+    border-radius: 10px;
+}
 /* JS */
 .js-scroll {
     opacity: 0;
