@@ -1,8 +1,14 @@
 const botao = document.querySelector('.botao')
 const mensagem = document.getElementById('mensagem')
-const urlPost = 'https://news-api-node.herokuapp.com/api/v1/news/936cce4d-110c-40f2-b1c1-26a49cfe3484'
+const urlPost = 'https://news-api-node.herokuapp.com/api/v1/news/92b5a2a5-0ab5-48ad-90a6-9be44d918f99'
 const postFeitos = document.querySelector('.post-feitos')
-var novoElemento = document.createElement('p')
+
+const novosElementos = (mensagemNova, novoElementoAtribuido) => {
+    const novoElemento = novoElementoAtribuido
+    const novaMensagem = mensagemNova
+    novoElemento.appendChild(novaMensagem)
+    postFeitos.appendChild(novoElemento)  
+}
 
 function mostrarMensagens() {
 
@@ -13,13 +19,11 @@ function mostrarMensagens() {
     .then(function(data) {
 
         if(postFeitos) {
-            for(var i = 0; i < data.length; i++) {
-                var mensagemNova = document.createTextNode([i + 1] + " - " + data[i].post)
+            data.forEach(dados => {
+                var mensagemNova = document.createTextNode(dados.post)
                 var novoElemento = document.createElement('p')
-
-                novoElemento.appendChild(mensagemNova)
-                postFeitos.appendChild(novoElemento)
-            }
+                novosElementos(mensagemNova, novoElemento)
+            });
         }
 
     });
@@ -36,7 +40,7 @@ function enviarMensagem() {
                 post: mensagem.value
             };
         
-            fetch('https://news-api-node.herokuapp.com/api/v1/news/936cce4d-110c-40f2-b1c1-26a49cfe3484',
+            fetch(urlPost,
                 {
                     method: 'post',
                     headers: {
@@ -46,7 +50,15 @@ function enviarMensagem() {
                     body: JSON.stringify(poster)
                 })
                 .then(results => results.json())
-                mostrarMensagens()
+                .then(function(data) {
+
+                    if(postFeitos) {
+                        var mensagemNova = document.createTextNode(data.post)
+                        var novoElemento = document.createElement('p')
+                        novosElementos(mensagemNova, novoElemento)
+                    }
+            
+                });
         })
     }
 
@@ -58,7 +70,6 @@ const animacaoDeScrollar = () => {
 	const sessentaPorCentoDaTela = window.innerHeight * 0.6
 
 	function animarAoScrollar() {
-
 		section.forEach((itens) => {
 			const distanciaAteOTopo = itens.getBoundingClientRect().top
             const metadeDaTela = distanciaAteOTopo - sessentaPorCentoDaTela
@@ -66,13 +77,10 @@ const animacaoDeScrollar = () => {
 			if(metadeDaTela < 0) {
 				itens.classList.add('animar')
             }
-            
+     
         })
-        
 	}
-
 	animarAoScrollar()
     window.addEventListener('scroll', animarAoScrollar)
-    
 }
 animacaoDeScrollar()
