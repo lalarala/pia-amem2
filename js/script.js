@@ -1,6 +1,6 @@
 const botao = document.querySelector('.botao')
 const mensagem = document.getElementById('mensagem')
-const urlPost = 'https://news-api-node.herokuapp.com/api/v1/news/92b5a2a5-0ab5-48ad-90a6-9be44d918f99'
+const urlPost = 'https://news-api-node.herokuapp.com/api/v1/news/bbef5194-36be-4a5f-84d7-645a88368209'
 const postFeitos = document.querySelector('.post-feitos')
 
 const novosElementos = (mensagemNova, novoElementoAtribuido) => {
@@ -40,25 +40,25 @@ function enviarMensagem() {
                 post: mensagem.value
             };
         
-            fetch(urlPost,
-                {
-                    method: 'post',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(poster)
-                })
-                .then(results => results.json())
-                .then(function(data) {
+            fetch(urlPost, {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(poster)
+            })
+            .then(results => results.json())
+            .then(function(data) {
 
-                    if(postFeitos) {
-                        var mensagemNova = document.createTextNode(data.post)
-                        var novoElemento = document.createElement('p')
-                        novosElementos(mensagemNova, novoElemento)
-                    }
-            
-                });
+                if(postFeitos) {
+                    var mensagemNova = document.createTextNode(data.post)
+                    var novoElemento = document.createElement('p')
+                    novosElementos(mensagemNova, novoElemento)
+                }
+        
+            });
+            mensagem.value = ''
         })
     }
 
