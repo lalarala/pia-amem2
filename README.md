@@ -1,6 +1,6 @@
 # Ong São Francisco de Assis
 
-Site autoritário, criado durante um trabalho da faculdade.
+Site criado durante um trabalho da faculdade.
 
 O trabalho pedia para criar um site para alguma ONG de Pouso Alegre - MG.
 
