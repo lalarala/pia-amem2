@@ -7,12 +7,12 @@ img {
 }
 
 .icon-menu {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     display: inline-block;
 }
 .btn {
-    background: #F2CB3F;
+    background: #79ee4b;
     padding: 10px 10px;
     color: #000;
     font-weight: bold;
@@ -92,7 +92,7 @@ img {
 /* HEADER DESKTOP */
 .barra_topo {
     background-color: #000000;
-    padding: 10px 0;
+    padding: 10px 10px;
 }
 .barra_topo p {
     color: #fff;
@@ -102,15 +102,15 @@ img {
     font-weight: bold;
 }
 .header {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 .header-menu {
     text-align: right;
 }
 .header-menu ul li {
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 .header-menu ul li a {
     color: #000000;
@@ -118,7 +118,7 @@ img {
     font-family: sans-serif;
     font-weight: bold;
     display: block;
-    padding: 10px 10px;
+    padding: 1px 10px;
     font-family: 'Montserrat', sans-serif;
 }
 .header-menu ul li a:hover {
@@ -128,7 +128,7 @@ img {
 
 /* INTRODUCAO */
 .introducao {
-    background-image: url(../img/pexels-photo-695644.webp);
+    background-image: url(../img/preto.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -312,7 +312,7 @@ img {
 }
 .contatos a:hover {
     transition: .3s;
-    color: #000;
+    color: #ffffff;
 }
 .contatos img {
     height: 20px;
@@ -487,7 +487,7 @@ img {
     max-width: 250px;
 }
 .contato a {
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     font-size: 0.875em;
 }

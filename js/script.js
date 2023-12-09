@@ -211,3 +211,4 @@ PayStandCheckout.checkoutComplete = function (data) {
   $('#card-number').change(function(){
     console.log(getCreditCardType($(this).val()));
   })*/
+

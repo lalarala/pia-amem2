@@ -16,6 +16,7 @@ a {
 
 ol, ul {
 	list-style: none;
+	height: 10px;
 }
 
 html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main {
